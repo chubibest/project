@@ -1,0 +1,29 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "get-schema": "graphql get-schema -p prisma",
+    "dev-t": "ts-node-dev --transpile-only src",
+    "dev": "ts-node-dev src",
+    "tsc-watch": "tsc -w",
+    "tsc": "tsc",
+    "init": "tslint --init"
+  },
+  "author": "chubi_best",
+  "license": "ISC",
+  "dependencies": {
+    "@types/ws": "^6.0.3",
+    "graphql-yoga": "^1.18.3",
+    "prisma-binding": "^2.3.16"
+  },
+  "devDependencies": {
+    "graphql-cli": "^3.0.14",
+    "ts-node-dev": "^1.0.0-pre.43",
+    "tslint": "^5.20.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^3.6.4"
+  }
+}

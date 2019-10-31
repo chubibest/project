@@ -1,0 +1,45 @@
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  phone_number: Float!
+  password: String!
+}
+
+type Request {
+  id: ID!
+  service: Service!
+  requester:  User!
+}
+
+type Service {
+  id: ID!
+  name: ServiceName!
+  requesters: [User!]!
+  providers: [User!]!
+}
+
+enum ServiceName {
+  petSitter
+}
+
+type Mutation {
+  signup(data: SignUpInput!): AuthPayLoad!
+}
+
+type Query {
+  dummy: String!
+}
+
+input SignUpInput {
+  name: String!
+  email: String!
+  phone_number: Float!
+  password: String!
+}
+
+type AuthPayLoad {
+  user: User!
+  token: String!
+}
+
